@@ -2,11 +2,9 @@ import { useState } from 'react';
 import React from 'react';
 import 'react-dates/initialize';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController, isInclusivelyBeforeDay } from 'react-dates';
-import moment from "moment";
+import { DateRangePicker } from 'react-dates';
 import 'moment/locale/es'
 import 'react-dates/lib/css/_datepicker.css';
-import { render } from '@testing-library/react';
 import './styles/Calendar.css';
 
 export const RangeCalendar = ({ minDate, maxDate }) => {
@@ -31,12 +29,12 @@ export const RangeCalendar = ({ minDate, maxDate }) => {
         console.log('End is: ' + endDate);
     };
 
-    const isOutsideRange = day =>
-        day.isAfter(maxDate) || day.isBefore(minDate);
+    // const isOutsideRange = day =>
+    //     day.isAfter(maxDate) || day.isBefore(minDate);
 
-    const handleClose = () => {
-        setFocusedInput(false);
-    }
+    // const handleClose = () => {
+    //     setFocusedInput(false);
+    // }
     return (
         <div className='rangeDate'>
             <DateRangePicker

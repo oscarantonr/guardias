@@ -1,0 +1,64 @@
+.main-container{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  /* max-width: 1320px; */
+
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.single-cal{
+background-color: rgb(248, 249, 250);
+padding-top: 2%;
+padding-bottom: 2%;
+}
+
+.single-list{
+  background-color: bisque;
+}
+
+.singleDate .rangeDate{
+  margin: 2% 0 2% 0;
+}
+
+.CalendarDay:nth-last-child(-n+2){
+  background-color: brown;
+  color: white;
+  }
+  
+  .list-dates {
+/* display: inline-flex; */
+  }
+  
+  .date-text{
+    font-weight: bold;
+  }
+  
+  .input-cont{
+    display: inline-flex;
+  }
+
+
+  .no-data{
+    font-weight: bold;
+  }
+  
+  /* TABLE */
+.table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 0.3rem solid grey;
+}
+
+  .th, .td{
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .form-check-label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+  }

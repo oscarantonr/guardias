@@ -11,6 +11,7 @@ import './styles/Calendar.css';
 export const SingleCalendar = props => {
     const [focused, setFocused] = useState(Boolean);
     const [dateFinal, setDate] = useState(null);
+    const [totalMonths, setTotalMonth] = useState(null);
     const { handleAddItem } = props;
 
     const handleSubmit = e => {
@@ -25,12 +26,17 @@ export const SingleCalendar = props => {
 
     const onFocusChange = ({ focused }) => {
         setFocused(focused);
+        if (window.innerWidth <= 768) {
+            setTotalMonth(1);
+        } else {
+            setTotalMonth(2);
+        }
     };
 
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <div className='singleDate form-group col-6'>
+                <div className='singleDate form-group col-12'>
                     <SingleDatePicker
                         date={dateFinal}
                         id="date_picker_start_date_id"
@@ -43,7 +49,7 @@ export const SingleCalendar = props => {
                         // showClearDate={true}
                         // noBorder={true}
                         // onClose={(e) => handleClose(e.date._d)}
-                        // numberOfMonths={5}
+                        numberOfMonths={totalMonths}
                         showDefaultInputIcon
                         inputIconPosition="after"
                     />

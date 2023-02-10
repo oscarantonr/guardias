@@ -31,7 +31,7 @@ const Container = () => {
                 </div>
             </div>
             <div className='row'>
-                <div className='col-6 single-list'>
+                <div className='col-12 single-list'>
                     <ListDates list={list} setList={setList} />
                 </div>
             </div>
